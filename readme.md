@@ -1,6 +1,6 @@
-#Lab 6
+# Lab 6
 
-##Using .filter() in Assignment #1
+## Using .filter() in Assignment #1
 
 The filter function takes an array and creates a new array based on a boolean expression. If the expression evaluates to true then that element becomes part of the new array, but if it evaluates to false, it does not. The original array is not transformed, but the new array could contain fewer elements.
 
@@ -20,7 +20,7 @@ let filteredEmojis = emojis
   .join("");
 ```
 
-![emoji search example]("/katieatgeorgian/comp2112-assignment1/blob/master/searchScreenshot.png?raw=true)
+![emoji search example](/searchScreenshot.png)
 
 The other times I used the filter function was on each of the emoji categories so that if one category was clicked, only the emojis of that particular category would be displayed. Because each individual emoji had a category assigned to it, I filtered my emojis array so that if the emoji contained the category word then that emoji would be assigned to thew new array, but if it didn't match it wouldn't.
 
@@ -42,4 +42,4 @@ function searchSmiles(e) {
 }
 ```
 
-![emoji search example]("/katieatgeorgian/comp2112-assignment1/blob/master/categoryScreenshot.png?raw=true)
+![emoji search example](categoryScreenshot.png)

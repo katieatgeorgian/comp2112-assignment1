@@ -20,7 +20,7 @@ let filteredEmojis = emojis
   .join("");
 ```
 
-![emoji search example](../searchScreenshot.png)
+![emoji search example]("/katieatgeorgian/comp2112-assignment1/blob/master/searchScreenshot.png?raw=true)
 
 The other times I used the filter function was on each of the emoji categories so that if one category was clicked, only the emojis of that particular category would be displayed. Because each individual emoji had a category assigned to it, I filtered my emojis array so that if the emoji contained the category word then that emoji would be assigned to thew new array, but if it didn't match it wouldn't.
 
@@ -42,4 +42,4 @@ function searchSmiles(e) {
 }
 ```
 
-![emoji search example](../searchScreenshot.png)
+![emoji search example]("/katieatgeorgian/comp2112-assignment1/blob/master/categoryScreenshot.png?raw=true)

@@ -56,7 +56,9 @@ function render() {
       }</a> <span class="username">@${tweet.username}</span></h6>
             <p>${tweet.tweet}</p>
             <div class="imgGifPoll">
-            ${tweet.img}
+            ${tweet.img} 
+            </div>
+            <div class="pollSpace">
             ${tweet.isPollCreated ? displayVotes(tweet, idx) : ""}
             </div>
             <div>
@@ -105,17 +107,17 @@ function tweeting(e) {
   e.preventDefault();
   const p = document.querySelector("textarea");
   const voteOptions = {
-    a: imgGifPoll.querySelector("#pollchoice1")
-      ? imgGifPoll.querySelector("#pollchoice1").value
+    a: pollSpace.querySelector("#pollchoice1")
+      ? pollSpace.querySelector("#pollchoice1").value
       : "",
-    b: imgGifPoll.querySelector("#pollchoice2")
-      ? imgGifPoll.querySelector("#pollchoice2").value
+    b: pollSpace.querySelector("#pollchoice2")
+      ? pollSpace.querySelector("#pollchoice2").value
       : "",
-    c: imgGifPoll.querySelector("#pollchoice3")
-      ? imgGifPoll.querySelector("#pollchoice3").value
+    c: pollSpace.querySelector("#pollchoice3")
+      ? pollSpace.querySelector("#pollchoice3").value
       : "",
-    d: imgGifPoll.querySelector("#pollchoice4")
-      ? imgGifPoll.querySelector("#pollchoice4").value
+    d: pollSpace.querySelector("#pollchoice4")
+      ? pollSpace.querySelector("#pollchoice4").value
       : ""
   };
 
@@ -138,9 +140,11 @@ function tweeting(e) {
       isPollDone: false
     });
   }
+
   // clear textbox and any image
   p.value = "";
   imgGifPoll.innerHTML = "";
+  pollSpace.innerHTML = "";
 
   render();
 }
@@ -254,7 +258,7 @@ function chooseEmoji(e) {
     let selectedEmoji = e.target.innerHTML;
     textarea.value += selectedEmoji;
     //closes modal
-    $("#emojimodal").modal("hide");
+    // $("#emojimodal").modal("hide");
   }
 }
 
@@ -429,7 +433,7 @@ function insertPoll() {
   // todo: disable the tweet button until all fields plus a question is inserted
   textarea.placeholder = "Ask a question...";
 
-  imgGifPoll.innerHTML = `
+  pollSpace.innerHTML = `
                   <form>
                     <div class="form-group">
                       <input type="text" class="form-control" id="pollchoice1" aria-describedby="" maxlength="25" placeholder="Choice 1">
